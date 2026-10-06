@@ -46,14 +46,142 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Example only</td>
-                        <td>Replace</td>
-                        <td>Yes/No</td>
-                        <td>Replace</td>
-                        <td>Replace</td>
-                        <td>Replace or N/A</td>
-                        <td>Replace or none</td>
-                        <td>Replace</td>
+                        <td>Full name</td>
+                        <td>Used to verify identity when client checks in</td>
+                        <td>Yes</td>
+                        <td>input type="text"</td>
+                        <td>name="full_name" value="first_name" value="last_name</td>
+                        <td>autocomplete="name"</td>
+                        <td>required, first and last name</td>
+                        <td>Medium sensitivity. Collected solely for identification</td>
+                    </tr>
+                    <tr>
+                        <td>Phone number</td>
+                        <td>Used to receive booking confirmation</td>
+                        <td>No</td>
+                        <td>input type="tel"</td>
+                        <td>name="phone_no"</td>
+                        <td>autocomplete="tel"</td>
+                        <td>not required minlength="10" maxlength="15"</td>
+                        <td>Medium sensitivity. Collected solely to contact client</td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td>Used to receive booking confirmation</td>
+                        <td>Yes</td>
+                        <td>input type="email"</td>
+                        <td>name="email"</td>
+                        <td>autocomplete="email"</td>
+                        <td>required, must follow placeholder format</td>
+                        <td>Medium sensitivity. Collected solely to contact client</td>
+                    </tr>
+                    <tr>
+                        <td>Preferred contact</td>
+                        <td>Used to verify client's contact preference</td>
+                        <td>Yes</td>
+                        <td>input type="checkbox"</td>
+                        <td>name="contact_pref" value="email"</td>
+                        <td>autocomplete="name" autocomplete="email"</td>
+                        <td>required, must select one</td>
+                        <td>Low Sensitivity</td>
+                    </tr>
+                    <tr>
+                        <td>Preferred contact</td>
+                        <td>Used to verify client's contact preference</td>
+                        <td>Yes</td>
+                        <td>input type="checkbox"</td>
+                        <td>name="contact_pref" value="phone_no"</td>
+                        <td>autocomplete="name" autocomplete="tel"</td>
+                        <td>required, must select one</td>
+                        <td>Low Sensitivity</td>
+                    </tr>
+                    <tr>
+                        <td>Type of service</td>
+                        <td>Used to verify service client desired service</td>
+                        <td>Yes</td>
+                        <td>input type="radio"</td>
+                        <td>name="service" value="lash_lift"</td>
+                        <td>autocomplete="n/a"</td>
+                        <td>required, must select one</td>
+                        <td>Low sensitivity</td>
+                    </tr>
+                        <td>Type of service</td>
+                        <td>Used to verify service client desired service</td>
+                        <td>Yes</td>
+                        <td>input type="radio"</td>
+                        <td>name="service" value="full_set"</td>
+                        <td>autocomplete="n/a"</td>
+                        <td>required, must select one</td>
+                        <td>Low sensitivity</td>
+                    </tr>
+                        <td>Type of service</td>
+                        <td>Used to verify service client desired service</td>
+                        <td>Yes</td>
+                        <td>input type="radio"</td>
+                        <td>name="service" value="touch_up"</td>
+                        <td>autocomplete="n/a"</td>
+                        <td>required, must select one</td>
+                        <td>Low sensitivity</td>
+                    </tr>
+                    <tr>
+                        <td>Type of service</td>
+                        <td>Used to verify service client desired service</td>
+                        <td>Yes</td>
+                        <td>input type="radio"</td>
+                        <td>name="service" value="lash_removal"</td>
+                        <td>autocomplete="n/a"</td>
+                        <td>required, must select one</td>
+                        <td>Low sensitivity</td>
+                    </tr>
+                    <tr>
+                        <td>Desired look</td>
+                        <td>Used to understand client's desired style</td>
+                        <td>No</td>
+                        <td>input type="checkbox"</td>
+                        <td>name="style" value="cat_eye"</td>
+                        <td>autocomplete="n/a"</td>
+                        <td>not required. if non applicable, select n/a</td>
+                        <td>Low sensitivity</td>
+                    </tr>
+                    <tr>
+                        <td>Desired look</td>
+                        <td>Used to understand client's desired style</td>
+                        <td>No</td>
+                        <td>input type="checkbox"</td>
+                        <td>name="style" value="full_volume"</td>
+                        <td>autocomplete="n/a"</td>
+                        <td>not required. if non applicable, select n/a</td>
+                        <td>Low sensitivity</td>
+                    </tr>
+                    <tr>
+                        <td>Desired look</td>
+                        <td>Used to understand client's desired style</td>
+                        <td>No</td>
+                        <td>input type="checkbox"</td>
+                        <td>name="style" value="wispy_natural"</td>
+                        <td>autocomplete="n/a"</td>
+                        <td>not required. if non applicable, select n/a</td>
+                        <td>Low sensitivity</td>
+                    </tr>
+                    <tr>
+                        <td>Additional comments</td>
+                        <td>Used for client to share questions / concerns</td>
+                        <td>No</td>
+                        <td>input type="textarea"</td>
+                        <td>name="comments"</td>
+                        <td>autocomplete="n/a"</td>
+                        <td>not required maxlength="300"</td>
+                        <td>High sensitivity. Collected for client to express personal concerns</td>
+                    </tr>
+                    <tr>
+                        <td>Submit</td>
+                        <td>Used to verify identity when client checks in</td>
+                        <td>Yes</td>
+                        <td>button type="submit"</td>
+                        <td>name="submit" value="submit form"</td>
+                        <td>autocomplete="n/a"</td>
+                        <td>required</td>
+                        <td>n/a interactive control</td>
                     </tr>
                 </tbody>
             </table>
