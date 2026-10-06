@@ -35,17 +35,22 @@
                     <div class="field">
                         <legend>*Preferred contact</legend>
                         <label>
-                        <input id="contact_pref" name="contact_pref" value="email" type="radio">Email</label>
+                        <input id="contact_pref" name="contact_pref" value="email" type="checkbox">Email</label>
                         <label>
-                        <input id="contact_pref" name="phone_no" value="phone number" type="radio">Phone number</label>    
+                        <input id="contact_pref" name="phone_no" value="phone number" type="checkbox">Phone number</label>    
                     </div>
                 </fieldset>
                 <fieldset>
-                    <legend>F3 · Request choices</legend>
-                    <p class="help">Use an appropriate radio, checkbox, or select structure for the task.</p>
+                    <legend>F3 · Type of service</legend>
+                    <p class="help">*Use an appropriate radio, checkbox, or select structure for the task.</p>
                     <label class="choice">
-                        <input type="radio" name="request_type" value="option-a"> Replace with option A</label>
-                        <label class="choice"><input type="radio" name="request_type" value="option-b"> Replace with option B</label>
+                        <input type="radio" name="service" value="lash_lift">Lash lift & tint</label>
+                    <label class="choice">
+                        <input type="radio" name="service" value="full_set">Full set</label>
+                    <label class="choice">
+                        <input type="radio" name="service" value="Touch_up">Touch up</label>
+                    <label class="choice">
+                        <input type="radio" name="service" value="Lash_removal">Lash removal</label>
                     </fieldset>
                     <div class="field">
                         <label for="details">Request details</label>
