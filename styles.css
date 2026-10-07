@@ -12,27 +12,14 @@
     --font-headings:"Yusei Magic", sans-serif;
     --font-p: "Inter", Arial, sans-serif;
 
-    --text-heading-h1: clamp(1.5rem, 2vw, 1rem);
-    --text-heading-h2: clamp(1.5rem, 1.5vh, 1rem);
-    --text-p: clamp(1rem, 1.5vh, 1.25rem);
+    --text-heading-h1: clamp(1.25rem, 2.5vw, 2rem);
+    --text-heading-h2: clamp(1rem, 2vw, 1.5rem);
+    --text-p: clamp(0.95rem, 1vw, 1.05rem);
 
     --space-3:1rem;
     --radius:.5rem;
     --measure:68ch;
 }
-
-.yusei-magic-regular {
-    font-family: "Yusei Magic", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.inter-body{
-    font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 250;
-    font-style: normal;
-  }
 
 *,*::before,*::after{
     box-sizing:border-box;
@@ -59,18 +46,26 @@ h1, h2, h3, h4, legend, .fieldset-legend {
 h2{
     font-size: var(--text-heading-h2);
 }
+legend,label{
+    font-weight:700;
+}
   
 p{
     font-size: var(--text-p);
 }
-.eyebrow{
-    color:var(--color-accent);
-    font-weight:700;
+.help{
+    margin:0;
+    color:var(--color-charcoal);
 }
 .lede{
     max-width:var(--measure);
     font-size:1.25rem;
 }
+.eyebrow{
+    color:var(--color-charcoal);
+    font-weight:700;
+}
+
 main{
     max-width:52rem;
     margin:auto;
@@ -83,20 +78,10 @@ form,fieldset,.field{
     display:grid;
     gap:.65rem;
 }
-form{
-    gap:1.5rem;
-}
 fieldset{
     padding:1rem;
-    border:1px solid #d0d0d0;
+    border:1px solid var(--color-muted-olive);
     border-radius:var(--radius);
-}
-legend,label{
-    font-weight:700;
-}
-.help{
-    margin:0;
-    color:var(--color-muted);
 }
 input,select,textarea,button{
     font:inherit;
@@ -121,32 +106,53 @@ textarea{
     inline-size:1.25rem;
     block-size:1.25rem;
 }
-button{
-    justify-self:start;
-    min-height:44px;
-    padding:.75rem 1rem;
-    background:var(--color-action);
-    color:#fff;
-    border:2px solid var(--color-action);
-    border-radius:.25rem;
-    font-weight:700;
-}
-:focus-visible{
-    outline:.2rem solid var(--color-accent);
-    outline-offset:.2rem;
-}
-.error-summary,.field-error{
-    padding:1rem;
-    border-left:.4rem solid var(--color-error);
-    background:#fff1f0;
-}
-.field-error input{
-    border-color:var(--color-error);
-}
+
+button {
+    padding: 12px 20px;
+    background: var(--color-muted-olive);
+    cursor: pointer;
+    font-family: var(--font-headings);
+    font-size: 1.5rem;
+    color: var(--color-white);
+    border: none;
+    border-radius: 4px;
+  }
+
+button:hover, button:focus {
+    background: var(--color-charcoal);
+    outline: 3px solid var(--color-white);
+  }
 button:disabled{
     opacity:.55;
     cursor:not-allowed;
 }
+
+:focus-visible {
+    outline: 3px solid var(--color-charcoal);
+    outline-offset: 2px;
+}
+
+.error-summary,.field-error{
+    padding:1rem;
+    border-left:.4rem solid var(--color-error-border);
+    background: var(--color-error-bg);
+    border-radius: 4px;
+}
+.error-summary a{
+    color: var(--color-error-text);
+    font-weight: bold;
+}
+input:not([type="radio"]):not([type="checkbox"]):user-invalid,
+select:invalid,
+textarea:invalid,
+.field-error input,
+.field-error select,
+.field-error textarea {
+  border: 2px dashed var(--color-error-border);
+  background-color: var(--color-error-bg);
+}
+
+
 @media (min-width:48rem){
     .paired-fields{
         display:grid;
