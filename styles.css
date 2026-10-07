@@ -1,5 +1,5 @@
 :root{
-    --color-pink-mist:#D991BA;
+    --color-pink-mist: #D991BA;
     --color-petal-frost:#F5D5ED;
     --color-muted-olive:#8CAE68;
     --color-charcoal:#222021;
@@ -9,28 +9,59 @@
     --color-error-bg: #FFF0F5;
     --color-error-border: #C70039;
 
-    --font-headings:"Marck Script", cursive;
-    --font-p: Montserrat, Arial, sans-serif;
+    --font-headings:"Yusei Magic", sans-serif;
+    --font-p: "Inter", Arial, sans-serif;
 
-    
+    --text-heading-h1: clamp(1.5rem, 2vw, 1rem);
+    --text-heading-h2: clamp(1.5rem, 1.5vh, 1rem);
+    --text-p: clamp(1rem, 1.5vh, 1.25rem);
+
     --space-3:1rem;
     --radius:.5rem;
     --measure:68ch;
 }
+
+.yusei-magic-regular {
+    font-family: "Yusei Magic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.inter-body{
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 250;
+    font-style: normal;
+  }
+
 *,*::before,*::after{
     box-sizing:border-box;
 }
 body{
     margin:0;
-    color:var(--color-text);
-    background:var(--color-surface);
-    font-family:Arial,sans-serif;
-    line-height:1.6;
+    color: var(--color-charcoal);
+    background:var(--color-petal-frost);
+    font-family: var(--font-p);
+    line-height:1.5;
 }
 .page-header{
     padding:clamp(2rem,6vw,5rem);
-    background:var(--color-action);
+    background:var(--color-pink-mist);
+    font-family: var(--font-headings);
+    font-size: var(--text-heading-h1);
     color:#fff;
+}
+h1, h2, h3, h4, legend, .fieldset-legend {
+    font-family: var(--font-headings);
+    color: var(--color-charcoal);
+}
+  
+h2{
+    font-size: var(--text-heading-h2);
+}
+  
+p{
+    font-size: var(--text-p);
 }
 .eyebrow{
     color:var(--color-accent);
