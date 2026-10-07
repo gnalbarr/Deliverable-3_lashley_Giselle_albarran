@@ -19,7 +19,7 @@
                 <h2>F1 · Purpose and Expectations</h2>
                 <p>Sections marked with a (*) are required. All other sections are optional. At Lashley, your information is solely being used for contact / verification purposes, and will not be shared with any external parties.</p>
             </section>
-            <form action="" method="get">
+            <form action="#" method="get">
                 <fieldset>
                     <legend>F3 · Contact information</legend>
                     <p class="help">Please mark the following fields with your contact information, so we can connect with you.</p>
@@ -36,11 +36,10 @@
                         <input id="email" name="email" type="email" autocomplete="email" placeholder="name@example.com" required>
                     </div>
                     <div class="field">
-                        <legend>*Preferred contact</legend>
+                        <label>*Preferred contact
+                        <input id="pref_email" name="contact_pref" value="email" type="checkbox">Email</label>
                         <label>
-                        <input id="contact_pref" name="contact_pref" value="email" type="checkbox">Email</label>
-                        <label>
-                        <input id="contact_pref" name="phone_no" value="phone number" type="checkbox">Phone number</label>    
+                        <input id="pref_phone" name="contact_pref" value="phone number" type="checkbox">Phone number</label>    
                     </div>
                 </fieldset>
                 <fieldset>
@@ -99,9 +98,12 @@
                             Email address must follow format (name@example.com).
                           </p>
                           <input type="email" id="specimen-email" name="specimen_email" value="janedoe@site.domain" aria-invalid="true" aria-describedby="specimen-email-help specimen-email-error" required>
+                        </div>
 
-                    <button type="button" disabled>Disabled example</button>
+                        <button type="button" disabled>Disabled example</button>
+                        </fieldset>
                 </section>
+
                 <section id="documentation">
                     <h2>F2 and F6 · Planning and Evidence</h2>
                     <p>Link your field inventory, state matrix, fictional test-data list, completed test record, and AI disclosure.</p>
