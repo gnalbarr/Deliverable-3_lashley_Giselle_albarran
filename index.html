@@ -66,29 +66,37 @@
                     </div>
                     <button type="submit">Submit form!</button>
                 </form>
-                <section id="states" class="states-container">
+
+                <section id="states" class="states-container" aria-labelledby="states_heading">
                     <h2 id="states_heading">F5 · State and Recovery Specimen</h2>
                     <p class="section_note">This section will display how errors on this form will display</p>
+            
 
                         <div class="error-summary" role="alert" tabindex="-1" id="specimen-error-summary">
-                            <h3 class="error-summary-title">There is an issue with your submission</h3>
+                            <h3 class="error-summary-title">There is an issue with your submission: 1 error found</h3>
                             <p>Please fix the highlighted errors before resubmitting</p>
                             <ul class="error-summary-list">
                                 <li>
-                                    <a href="#email">Email address: Must match format, name@example.com</a>
-                                </li>
-                                <li>
-                                    <a href="#phone_no">Phone number: Must match format, (000)-000-0000</a>
-                                </li>
-                                <li>
-                                    <a href="#service">Type of service: Must select one</a>
-                                </li>
-                                <li>
-                                    <a href="#contact_pref">Preferred contact: Must select one</a>
+                                    <strong>Email address:</strong> <a href="#email">must match format, name@example.com</a>
                                 </li>
                             </ul>
+                        
                         </div>
-                    </div>
+                        <fieldset class="form-fieldset">
+                        <legend class="fieldset-legend">Specimen: Active Validation & Error Recovery</legend>
+            
+                        <div class="field-group field-error">
+                          <label for="specimen-email" class="field-label">
+                            Email Address <span class="required-symbol" aria-hidden="true">*</span>
+                          </label>
+                          <p class="field-help" id="specimen-email-help">Used to contact client and confirm booking</p>
+                          
+                          <p class="inline-error" id="specimen-email-error">
+                            <span class="error-prefix" aria-hidden="true">[Error]</span> 
+                            Email address must follow format (name@example.com).
+                          </p>
+                          <input type="email" id="specimen-email" name="specimen_email" value="janedoe@site.domain" aria-invalid="true" aria-describedby="specimen-email-help specimen-email-error" required>
+
                     <button type="button" disabled>Disabled example</button>
                 </section>
                 <section id="documentation">
